@@ -1,4 +1,4 @@
-# {{ Course Name }}
+# VueJS
 ## Full Stack Course - {{ Start Date }}
 
 ### ✏️ Homework
