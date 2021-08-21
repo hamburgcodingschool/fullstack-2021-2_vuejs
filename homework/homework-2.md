@@ -16,6 +16,9 @@ Find parts in the UI, which gets repeated and structure these in components.**
 **Use `props`to pass data to child components.**
 **Use `$emit`to pass data to parent components.**
 
+## Reference ##
+- Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp
+
 ## Bonus ##
 
 - Add a label in the bottom with the sum of the values from the 5 slider
