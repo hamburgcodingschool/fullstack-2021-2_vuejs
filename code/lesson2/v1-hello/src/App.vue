@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <CTAButton @onClick="defaultClicked" />
+  <CTAButton type="cancel" title="Cancel" @onClick="cancelClicked" />
+  <CTAButton type="confirm" title="OK" />
+  <CTAButton type="abort" title="😱" />
+
+  <Counter :value="counter" />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import CTAButton from "./components/CTAButton.vue";
+import Counter from "./components/Counter.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    CTAButton,
+    Counter,
+  },
+  data: function () {
+    return {
+      counter: 0,
+    };
+  },
+  methods: {
+    defaultClicked: function (payload) {
+      this.counter++;
+      console.log(this.counter);
+      console.log(payload);
+      console.log("SOMETHING HAPPENED!");
+    },
+    cancelClicked: function () {
+      console.log("MAKE SOMETHING GO BOOM!");
+    },
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style scoped></style>
