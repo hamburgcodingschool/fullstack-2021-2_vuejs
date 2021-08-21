@@ -17,7 +17,7 @@ Find parts in the UI, which gets repeated and structure these in components.**
 **Use `$emit`to pass data to parent components.**
 
 ## Reference ##
-- Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp
+- Slider CSS https://www.w3schools.com/howto/howto_js_rangeslider.asp
 
 ## Bonus ##
 
