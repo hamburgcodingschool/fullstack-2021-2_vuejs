@@ -3,14 +3,14 @@
   <SimpleComponent name="Bob" city="x" />
   <SimpleComponent name="Joe" :warning="true" />
 
-  <ColorComponent :colors="['red', 'green']" />
-  <ColorComponent :colors="list1" />
-  <ColorComponent :colors="list2" />
+  <ColorComponent :colors="list2" @onSelectColor="handleSelectColor" />
+  <ShowColor :color="selectedColor" />
 </template>
 
 <script>
 import SimpleComponent from "./components/SimpleComponent.vue";
 import ColorComponent from "./components/ColorComponent.vue";
+import ShowColor from "./components/ShowColor.vue";
 
 // EXERCISE:
 // 1 - Create a new component Color component
@@ -25,18 +25,25 @@ export default {
   components: {
     SimpleComponent,
     ColorComponent,
+    ShowColor,
   },
   data: function () {
     return {
+      selectedColor: "white",
       list1: ["red", "green", "#00f"],
       list2: ["yellow", "pink", "grey", "#ac345a"],
     };
+  },
+  methods: {
+    handleSelectColor() {
+      alert("hi");
+    },
   },
 };
 </script>
 
 <style>
 body {
-  background-color: #666;
+  background-color: #ebebeb;
 }
 </style>
