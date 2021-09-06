@@ -1,5 +1,10 @@
 <template>
-  <div class="detailContainer">{{ apiResponseData }}</div>
+  <div class="detailContainer">
+    <div v-if="apiResponseData.name">
+      {{ apiResponseData.abilities[0].ability }}
+    </div>
+    <div v-else>Click something on the left...</div>
+  </div>
 </template>
 
 <script>

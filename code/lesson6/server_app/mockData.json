@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Helder",
+    "city": "Porto"
+  },
+  {
+    "id": 2,
+    "name": "Siggi",
+    "city": "Hamburg"
+  },
+  {
+    "id": 3,
+    "name": "Jannek",
+    "city": "Hamburg"
+  },
+  {
+    "id": 4,
+    "name": "Flavia",
+    "city": "Pisa"
+  }
+]
