@@ -1,5 +1,5 @@
 const express = require("express");
-const mockData = require("./mockData.json");
+let mockData = require("./mockData.json");
 
 const router = express.Router();
 
@@ -25,6 +25,20 @@ router.post("/new_person", function(req, res) {
     });
 });
 
+
+router.delete("/:id", function(req, res) {
+
+    const newArray = mockData.filter(function(element) {
+        return element.id !== Number(req.params.id);
+    });
+    mockData = newArray;
+
+    res.json({
+        "status": "ok",
+        "message": "user Delete!!!!"
+    })
+});
+
 router.get("/:id", function(req, res) {
     
     const newArray = mockData.filter(function(element) {
@@ -37,7 +51,5 @@ router.get("/:id", function(req, res) {
         res.json("User not found");
     }
 });
-
-
 
 module.exports = router;

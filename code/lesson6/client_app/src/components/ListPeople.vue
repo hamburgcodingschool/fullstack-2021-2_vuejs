@@ -6,6 +6,7 @@
       {{ person.city }}
       <br />
       <br /> -->
+      <button @click="handleClickDelete(person.id)">X</button>
     </div>
   </div>
 </template>
@@ -18,6 +19,9 @@ export default {
     };
   },
   methods: {
+    handleClickDelete: function (personId) {
+      alert(personId);
+    },
     fetchPeople: async function () {
       try {
         const url = `http://localhost:3000/api`;
